@@ -1,0 +1,248 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --light-royal-blue: hsl(241, 81%, 54%);
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-grey-blue: hsl(224, 30%, 27%);
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+button {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 17px;
+  cursor: pointer;
+  border: none;
+  border-radius: 128px;
+  color: var(--white);
+  background: linear-gradient(
+    to bottom,
+    var(--dark-grey-blue) 100%,
+    var(--dark-grey-blue) 100%
+  );
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, #7755ff 0%, #6943ff 0%, #2f2ce9 100%);
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  background-color: var(--pale-blue);
+}
+
+main {
+  min-height: 100dvh;
+  place-content: center;
+}
+
+#wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 736px;
+  margin: 0 auto;
+  border-radius: 32px;
+  box-shadow: 0 30px 60px 0 rgba(61, 108, 236, 0.15);
+  background-color: var(--white);
+}
+
+.average-column {
+  padding: 38px 54px 46px;
+  text-align: center;
+  border-radius: 32px;
+  background: linear-gradient(to bottom, #7755ff 0%, #6943ff 0%, #2f2ce9 100%);
+}
+
+.average-column h1 {
+  color: var(--light-lavender);
+}
+
+.average-container span {
+  font-weight: 700;
+  color: var(--light-lavender);
+}
+
+#average {
+  color: var(--white);
+  font-size: 72px;
+  line-height: 72px;
+  font-weight: 800;
+}
+
+.scores-column {
+  padding: 38px 40px 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scores-column h1 {
+  color: var(--dark-grey-blue);
+}
+
+#scores-container {
+  display: grid;
+  gap: 16px;
+  margin-top: 28px;
+  margin-bottom: 41px;
+  width: 100%;
+}
+
+.average-container {
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    #4d21c9 0%,
+    rgba(37, 33, 201, 0) 100%,
+    rgba(37, 33, 201, 0) 100%
+  );
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0 auto;
+  margin-top: 35px;
+  margin-bottom: 28px;
+}
+
+.result-row span {
+  color: hsla(224, 30%, 27%, 0.5);
+}
+
+.average-text {
+  display: grid;
+  gap: 14px;
+}
+
+.average-text p {
+  color: var(--light-lavender);
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  padding: 16px;
+  color: var(--dark-grey-blue);
+}
+
+.score-category {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.reaction {
+  background-color: hsla(0, 100%, 67%, 0.05);
+}
+
+.reaction .score-category {
+  color: hsl(0, 100%, 67%);
+}
+
+.memory {
+  background-color: hsla(40, 100%, 56%, 0.05);
+}
+
+.memory .score-category {
+  color: hsl(40, 100%, 56%);
+}
+
+.verbal {
+  background-color: hsla(166, 100%, 37%, 0.05);
+}
+
+.verbal .score-category {
+  color: hsl(166, 100%, 37%);
+}
+
+.visual {
+  background-color: hsla(234, 85%, 45%, 0.05);
+}
+
+.visual .score-category {
+  color: hsl(234, 85%, 45%);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .average-column {
+    border-radius: 0 0 32px 32px;
+  }
+
+  .average-column h1 {
+    text-align: center;
+  }
+
+  .scores-column {
+    padding: 24px 30px 30px;
+  }
+
+  #scores-container {
+    display: grid;
+    gap: 16px;
+    margin-top: 28px;
+    margin-bottom: 41px;
+    width: 100%;
+  }
+
+  .average-container {
+    height: 140px;
+    width: 140px;
+    gap: 0;
+    margin: 0 auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+}
