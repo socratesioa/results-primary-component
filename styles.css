@@ -108,6 +108,7 @@ main {
 
 .scores-column h1 {
   color: var(--dark-grey-blue);
+  text-align: left;
 }
 
 #scores-container {
