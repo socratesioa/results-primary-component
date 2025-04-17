@@ -26,7 +26,7 @@ function renderCards() {
 
     row.innerHTML = `
     <div class="score-category">
-    <img src="${icon}"/>
+    <img src="${icon}" alt="Category Icon"/>
     <p>${category}</p>
     </div>
     <p class="score-text">${score}<span> / 100</span></p>
